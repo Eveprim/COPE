@@ -1,0 +1,106 @@
+Flutter crash report.
+Please report a bug at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter --no-color build appbundle
+
+## exception
+
+ProcessException: ProcessException: Process exited abnormally:
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Project 'app' not found in root project 'android'.
+
+* Try:
+Run with --stacktrace option to get the stack trace. Run with --info or --debug option to get more log output. Run with --scan to get full insights.
+
+* Get more help at https://help.gradle.org
+
+BUILD FAILED in 1s
+  Command: /Users/jeongjiho/Downloads/Telemedicine_App2/android/gradlew app:tasks --all --console=auto
+
+```
+#0      RunResult.throwException (package:flutter_tools/src/base/process.dart:124:5)
+#1      _DefaultProcessUtils.run (package:flutter_tools/src/base/process.dart:276:19)
+<asynchronous suspension>
+#2      flavorUndefinedHandler.<anonymous closure> (package:flutter_tools/src/android/gradle_errors.dart:317:38)
+<asynchronous suspension>
+#3      AndroidGradleBuilder.buildGradleApp (package:flutter_tools/src/android/gradle.dart:405:42)
+<asynchronous suspension>
+#4      AndroidGradleBuilder.buildAab (package:flutter_tools/src/android/gradle.dart:197:5)
+<asynchronous suspension>
+#5      BuildAppBundleCommand.runCommand (package:flutter_tools/src/commands/build_appbundle.dart:156:5)
+<asynchronous suspension>
+#6      FlutterCommand.run.<anonymous closure> (package:flutter_tools/src/runner/flutter_command.dart:1161:27)
+<asynchronous suspension>
+#7      AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:150:19)
+<asynchronous suspension>
+#8      CommandRunner.runCommand (package:args/command_runner.dart:209:13)
+<asynchronous suspension>
+#9      FlutterCommandRunner.runCommand.<anonymous closure> (package:flutter_tools/src/runner/flutter_command_runner.dart:281:9)
+<asynchronous suspension>
+#10     AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:150:19)
+<asynchronous suspension>
+#11     FlutterCommandRunner.runCommand (package:flutter_tools/src/runner/flutter_command_runner.dart:229:5)
+<asynchronous suspension>
+#12     run.<anonymous closure>.<anonymous closure> (package:flutter_tools/runner.dart:62:9)
+<asynchronous suspension>
+#13     AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:150:19)
+<asynchronous suspension>
+#14     main (package:flutter_tools/executable.dart:94:3)
+<asynchronous suspension>
+```
+
+## flutter doctor
+
+```
+[✓] Flutter (Channel stable, 2.10.4, on macOS 12.4 21F79 darwin-arm, locale ko-KR)
+    • Flutter version 2.10.4 at /Users/jeongjiho/Documents/flutter
+    • Upstream repository https://github.com/flutter/flutter.git
+    • Framework revision c860cba910 (9 weeks ago), 2022-03-25 00:23:12 -0500
+    • Engine revision 57d3bac3dd
+    • Dart version 2.16.2
+    • DevTools version 2.9.2
+
+[✓] Android toolchain - develop for Android devices (Android SDK version 32.0.0)
+    • Android SDK at /Users/jeongjiho/Library/Android/sdk
+    • Platform android-32, build-tools 32.0.0
+    • Java binary at: /Applications/Android Studio.app/Contents/jre/Contents/Home/bin/java
+    • Java version OpenJDK Runtime Environment (build 11.0.10+0-b96-7281165)
+    • All Android licenses accepted.
+
+[!] Xcode - develop for iOS and macOS (Xcode 13.4)
+    • Xcode at /Applications/Xcode.app/Contents/Developer
+    ✗ CocoaPods not installed.
+        CocoaPods is used to retrieve the iOS and macOS platform side's plugin code that responds to your plugin usage on the Dart side.
+        Without CocoaPods, plugins will not work on iOS or macOS.
+        For more info, see https://flutter.dev/platform-plugins
+      To install see https://guides.cocoapods.org/using/getting-started.html#installation for instructions.
+
+[✓] Chrome - develop for the web
+    • Chrome at /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+
+[✓] Android Studio (version 2020.3)
+    • Android Studio at /Applications/Android Studio.app/Contents
+    • Flutter plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/9212-flutter
+    • Dart plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/6351-dart
+    • Java version OpenJDK Runtime Environment (build 11.0.10+0-b96-7281165)
+
+[✓] VS Code (version 1.63.2)
+    • VS Code at /Users/jeongjiho/Downloads/Visual Studio Code.app/Contents
+    • Flutter extension version 3.36.0
+
+[✓] Connected device (2 available)
+    • Android SDK built for arm64 (mobile) • emulator-5554 • android-arm64  • Android 10 (API 29) (emulator)
+    • Chrome (web)                         • chrome        • web-javascript • Google Chrome 101.0.4951.64
+
+[✓] HTTP Host Availability
+    • All required HTTP hosts are available
+
+! Doctor found issues in 1 category.
+```
