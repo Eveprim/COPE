@@ -32,3 +32,8 @@
   - ### webrtc를 이용해서 의사와 환자가 원격 상담을 할 수 있음
   - ### 원격 진료 도구를 이용해서 더 자세하게 상담을 할 수 있음
 
+## mediasoup
+ - 원격 화상 통화를 위한 webrtc mediasoup SFU 서버
+
+## telemedicine-app
+ - 예약, 상담, 내역관리를 위한 flutter 웹, 앱
